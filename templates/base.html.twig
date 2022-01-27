@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     {# <link rel="icon" href="{{ asset('img/icon.png') }}"> #}
-    {#  <link rel="stylesheet" href="{{ asset ('css/app.css') }}"> #}
+   <link rel="stylesheet" href="css/app.css">
 
     <title>{% block title %}Bienvenue!{% endblock %}</title>
 
@@ -30,7 +30,8 @@
     {% endfor %}
 
     <main>
-        {% block body %} {% endblock %}
+        {% block body %}
+        {% endblock %}
     </main>
 
 
