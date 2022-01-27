@@ -59,6 +59,24 @@ class Sortie
      */
     private $participant;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Campus::class, inversedBy="sorties")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $siteOrganisateur;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Etat::class, inversedBy="sorties")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $etatSortie;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Lieu::class, inversedBy="sorties")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $lieuSortie;
+
     public function __construct()
     {
         $this->participants = new ArrayCollection();
@@ -177,6 +195,42 @@ class Sortie
     public function setParticipant(?Participant $participant): self
     {
         $this->participant = $participant;
+
+        return $this;
+    }
+
+    public function getSiteOrganisateur(): ?Campus
+    {
+        return $this->siteOrganisateur;
+    }
+
+    public function setSiteOrganisateur(?Campus $siteOrganisateur): self
+    {
+        $this->siteOrganisateur = $siteOrganisateur;
+
+        return $this;
+    }
+
+    public function getEtatSortie(): ?Etat
+    {
+        return $this->etatSortie;
+    }
+
+    public function setEtatSortie(?Etat $etatSortie): self
+    {
+        $this->etatSortie = $etatSortie;
+
+        return $this;
+    }
+
+    public function getLieuSortie(): ?Lieu
+    {
+        return $this->lieuSortie;
+    }
+
+    public function setLieuSortie(?Lieu $lieuSortie): self
+    {
+        $this->lieuSortie = $lieuSortie;
 
         return $this;
     }
