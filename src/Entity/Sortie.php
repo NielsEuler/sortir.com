@@ -55,9 +55,9 @@ class Sortie
     private $participants;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Participant::class, inversedBy="organisateur")
+     * @ORM\ManyToOne(targetEntity=Participant::class, inversedBy="sortieOrganisees")
      */
-    private $participant;
+    private $organisateur;
 
     /**
      * @ORM\ManyToOne(targetEntity=Campus::class, inversedBy="sorties")
@@ -187,14 +187,14 @@ class Sortie
         return $this;
     }
 
-    public function getParticipant(): ?Participant
+    public function getOrganisateur(): ?Participant
     {
-        return $this->participant;
+        return $this->organisateur;
     }
 
-    public function setParticipant(?Participant $participant): self
+    public function setOrganisateur(?Participant $participant): self
     {
-        $this->participant = $participant;
+        $this->organisateur = $participant;
 
         return $this;
     }
