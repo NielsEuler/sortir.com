@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ parent() }} | Home {% endblock %}
+
+{% block body %}
+
+    {% if app.user %}
+        <h1>Bonjour {{ app.user.firstname }}</h1>
+
+    {% else %}
+        <h1>Bonjour et bienvenue sur sortir.com</h1>
+    {% endif %}
+
+{% endblock %}
