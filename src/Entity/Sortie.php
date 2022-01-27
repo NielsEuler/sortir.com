@@ -192,9 +192,9 @@ class Sortie
         return $this->organisateur;
     }
 
-    public function setOrganisateur(?Participant $participant): self
+    public function setOrganisateur(?Participant $organisateur): self
     {
-        $this->organisateur = $participant;
+        $this->organisateur = $organisateur;
 
         return $this;
     }
