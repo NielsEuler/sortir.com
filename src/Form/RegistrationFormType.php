@@ -33,20 +33,26 @@ class RegistrationFormType extends AbstractType
                         new NotBlank(array("message" => "Merci d'ajouter votre nom"))
                     )
                 ))
-            ->add('password', PasswordType::class,
-                array('attr' => array('placeholder' => 'Votre mot de passe'),
-                    'constraints' => array(
-                        new NotBlank(array("message" => 'Entre 6 et 126 caractères')),
-                        new Length([
-                            'min' => 6,
-                            'minMessage' => 'Votre mot de passe est trop court : {{ limit }}',
-                            // max length allowed by Symfony for security reasons
-                            'max' => 126,
-                            'maxMessage' => 'Votre mot de passe est trop long : {{ limit }}'
-                        ])
-                    )
-                )
-            );
+            ->add('password', PasswordType::class, [
+                // instead of being set onto the object directly,
+                // this is read and encoded in the controller
+                'mapped' => false,
+                'attr' => ['autocomplete' => 'new-password'],
+                'attr' => array('placeholder' => 'Entre 6 et 256 caractères'),
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Ne peut être laissé vide',
+                        ]),
+                    new Length([
+                        'min' => 6,
+                        'minMessage' => 'Mot de passe trop petit (minimum {{ limit }} characters)',
+                        // max length allowed by Symfony for security reasons
+                        'max' => 4096,
+                        'maxMessage' => 'Mot de passe trop grand (maximum {{ limit }} characters)'
+                    ]),
+                ],
+            ])
+        ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void
