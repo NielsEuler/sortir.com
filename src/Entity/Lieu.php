@@ -143,9 +143,9 @@ class Lieu
         return $this->ville;
     }
 
-    public function setVille(?Ville $ville): self
+    public function setVille(?Ville $id): self
     {
-        $this->ville = $ville;
+        $this->ville = $id;
 
         return $this;
     }

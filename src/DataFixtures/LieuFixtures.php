@@ -10,7 +10,8 @@ class LieuFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-/*        $lieu = new Lieu();
+        $lieu = new Lieu();
+        $lieu->setVille();
         $lieu->setNom('Nantes');
         $lieu->setRue('rue de paris');
         $lieu->setLongitude(85);
@@ -18,6 +19,6 @@ class LieuFixtures extends Fixture
 
         $manager->persist($lieu);
 
-        $manager->flush();*/
+        $manager->flush();
     }
 }
