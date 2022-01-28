@@ -36,12 +36,13 @@ class RegistrationFormType extends AbstractType
             ->add('password', PasswordType::class,
                 array('attr' => array('placeholder' => 'Votre mot de passe'),
                     'constraints' => array(
-                        new NotBlank(array("message" => 'Saisir un mot de passe')),
+                        new NotBlank(array("message" => 'Entre 6 et 126 caractères')),
                         new Length([
                             'min' => 6,
-                            'minMessage' => 'Your password should be at least {{ limit }} characters',
+                            'minMessage' => 'Votre mot de passe est trop court : {{ limit }}',
                             // max length allowed by Symfony for security reasons
-                            'max' => 4096
+                            'max' => 126,
+                            'maxMessage' => 'Votre mot de passe est trop long : {{ limit }}'
                         ])
                     )
                 )
