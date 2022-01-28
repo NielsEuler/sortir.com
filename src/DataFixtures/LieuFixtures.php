@@ -15,9 +15,6 @@ class LieuFixtures extends Fixture
         $lieu->setRue('rue de paris');
         $lieu->setLongitude(85);
         $lieu->setLatitude(85);
-        $lieu->setVille(12);
-
-
 
         $manager->persist($lieu);
 
