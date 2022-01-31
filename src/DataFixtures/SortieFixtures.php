@@ -21,6 +21,7 @@ class SortieFixtures extends Fixture implements DependentFixtureInterface
         $Sortie1 -> setEtatSortie($this->getReference('etat1'));
         $Sortie1 -> setSiteOrganisateur($this->getReference('campus1'));
         $Sortie1 -> setLieuSortie($this->getReference('lieu1'));
+        $Sortie1 -> setOrganisateur($this->getReference('participant1'));
         $manager->persist($Sortie1);
 
 

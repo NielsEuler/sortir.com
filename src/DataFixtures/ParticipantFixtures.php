@@ -19,7 +19,8 @@ class ParticipantFixtures extends Fixture
         $participant1->setTelephone(0600000000);
         $participant1->setPseudo('Polo');
         $participant1->setMotDePasse('Polo');
-
+        $participant1->setCampusRattache($this->getReference('campus1'));
+        $this ->addReference('participant1', $participant1);
 
 
 
