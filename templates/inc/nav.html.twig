@@ -1,18 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="{{ path('main_home') }}" title="Home">Sortir.com</a>
+<nav class="navbar navbar-expand-lg navbar-dark">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                    <a class="nav-link active" aria-current="page" href="{{ path('main_home') }}">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_register') }}" title="Inscription">Mon profil</a>
+                    <a class="nav-link" href="#" title="MonProfil">Mon profil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_logout') }}" title="Deconnection">Logout</a>
+                        <a href="{{ path('app_logout') }}" title="Logout">LogOut</a>
                 </li>
+                    <li>
+                        <a class="nav-link" href="#" title="Admin dashboard"> | Administration | </a>
+                    </li>
             </ul>
         </div>
-    </div>
 </nav>

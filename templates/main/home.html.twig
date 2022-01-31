@@ -3,12 +3,9 @@
 {% block title %}{{ parent() }} | Home {% endblock %}
 
 {% block body %}
+        <form method="post">
 
-    <h1 class="h3 mb-3 font-weight-normal">Connexion :</h1>
-
-    <form method="post">
-
-        <div class="row g-3 align-items-center">
+        <div class="d-flex justify-content-center row g-3 align-items-center">
             <div class="col-auto">
                 <label class="col-form-label">Email :</label>
             </div>
@@ -34,7 +31,7 @@
             </div>
         </div>
 
-        <div class="row g-3 align-items-center">
+        <div class="d-flex justify-content-center row g-3 align-items-center">
             <div class="col-auto">
                 <br>
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">

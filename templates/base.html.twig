@@ -17,7 +17,16 @@
 <body>
 <div class="container">
     <header>
-        {% include "inc/nav.html.twig" %}
+        <div class="d-flex text-white bg-dark">
+            <div class="p-2">
+                <h1 class="d-flex justify-content-left
+                h3 mb-3
+                font-weight-normal">LOGO sortir.com</h1>
+            </div>
+            <div class="ml-auto p-2">
+                {% include "inc/nav.html.twig" %}
+            </div>
+        </div>
     </header>
 
     {# read and display all flash messages #}
@@ -36,7 +45,7 @@
 
 
     <footer>
-        <div>@{{ "now" | date("Y") }} Sortir.com</div>
+        <div class="d-flex justify-content-center">@{{ "now" | date("Y") }} Sortir.com</div>
     </footer>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
