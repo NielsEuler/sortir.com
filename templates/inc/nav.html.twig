@@ -1,18 +1,23 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+                <span class="border">
+                    <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ path('main_home') }}">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" title="MonProfil">Mon profil</a>
-                </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="{{ path('app_logout') }}" title="Logout">LogOut</a>
-                </li>
-                    <li>
-                        <a class="nav-link" href="#" title="Admin dashboard"> | Administration | </a>
                     </li>
+                </span>
+
+                <span class="border">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" title="MonProfil">Mon profil</a>
+                    </li>
+                </span>
+
+                <span class="border">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_logout') }}" title="Logout">LogOut</a>
+                  </li>
+                </span>
             </ul>
         </div>
 </nav>
