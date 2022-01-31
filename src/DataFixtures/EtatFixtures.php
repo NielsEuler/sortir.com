@@ -10,10 +10,10 @@ class EtatFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-        $Etat1 = new Etat();
-        $Etat1 -> setLibelle('Ouverte');
-
-        $manager->persist($Etat1);
+        $etat1 = new Etat();
+        $etat1 -> setLibelle('Ouverte');
+        $manager->persist($etat1);
+        $this ->addReference('etat1', $etat1);
 
 
         $manager->flush();

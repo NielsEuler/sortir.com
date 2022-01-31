@@ -14,6 +14,7 @@ class VilleFixtures extends Fixture
         $nantes->setNom('Nantes');
         $nantes->setCodePostal(34000);
         $manager->persist($nantes);
+        $this ->addReference('villeNantes', $nantes);
 
         $manager->flush();
     }
