@@ -19,7 +19,8 @@ class SortieFixtures extends Fixture implements DependentFixtureInterface
         $Sortie1 -> setNbInscriptionsMax(2);
         $Sortie1 -> setInfosSortie('week-end');
         $Sortie1 -> setEtatSortie($this->getReference('etat1'));
-
+        $Sortie1 -> setSiteOrganisateur($this->getReference('campus1'));
+        $Sortie1 -> setLieuSortie($this->getReference('lieu1'));
         $manager->persist($Sortie1);
 
 
@@ -30,6 +31,7 @@ class SortieFixtures extends Fixture implements DependentFixtureInterface
     public function getDependencies()
     {
         // TODO: Implement getDependencies() method.
-        return [EtatFixtures::class];[ParticipantFixtures::class];
+        return [EtatFixtures::class];
+       //[ParticipantFixtures::class];[LieuFixtures::class];
     }
 }

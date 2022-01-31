@@ -10,10 +10,10 @@ class CampusFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-        $nantes = new Campus();
-        $nantes->setNom('Campus de Nantes');
-
-        $manager->persist($nantes);
+        $campus1 = new Campus();
+        $campus1->setNom('campus1');
+        $this ->addReference('campus1', $campus1);
+        $manager->persist($campus1);
         $manager->flush();
     }
 }

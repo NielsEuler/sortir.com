@@ -11,14 +11,15 @@ class LieuFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager): void
     {
-        $lieu = new Lieu();
-        $lieu->setVille($this -> getReference ('villeNantes'));
-        $lieu->setNom('Nantes');
-        $lieu->setRue('rue de paris');
-        $lieu->setLongitude(85);
-        $lieu->setLatitude(85);
+        $lieu1 = new Lieu();
+        $lieu1->setVille($this -> getReference ('villeNantes'));
+        $lieu1->setNom('Nantes');
+        $lieu1->setRue('rue de paris');
+        $lieu1->setLongitude(85);
+        $lieu1->setLatitude(85);
+        $this ->addReference('lieu1', $lieu1);
 
-        $manager->persist($lieu);
+        $manager->persist($lieu1);
 
         $manager->flush();
     }

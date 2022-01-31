@@ -20,7 +20,7 @@ class ParticipantFixtures extends Fixture
         $participant1->setPseudo('Polo');
         $participant1->setMotDePasse('Polo');
 
-//        Bisous Abou
+
 
 
         $manager->persist($participant1);
