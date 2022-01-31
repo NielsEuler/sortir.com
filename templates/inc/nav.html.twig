@@ -1,12 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
                 <span class="border">
                     <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ path('main_home') }}">Accueil</a>
                     </li>
                 </span>
 
+                {% if app.user %}
                 <span class="border">
                     <li class="nav-item">
                         <a class="nav-link" href="#" title="MonProfil">Mon profil</a>
@@ -18,6 +21,9 @@
                         <a class="nav-link" href="{{ path('app_logout') }}" title="Logout">LogOut</a>
                   </li>
                 </span>
+                {% endif %}
+
             </ul>
+
         </div>
 </nav>
