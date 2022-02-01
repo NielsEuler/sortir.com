@@ -41,7 +41,7 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/creerSortie", name="main_creerSortie")
+     * @Route("/afficherSortie", name="main_afficherSortie")
      */
     public function afficherSortie() {
         $sortie1 = new Sortie();

@@ -20,10 +20,7 @@ class AfficherSortieType extends AbstractType
             ->add('dateHeureDebut')
             ->add('dateLimiteInscription')
             ->add('nbInscriptionsMax')
-            ->add('duree')
-            ->add('infosSortie')
-            ->add('siteOrganisateur')
-            ->add('lieuSortie');
+            ->add('duree');
     }
 
 
