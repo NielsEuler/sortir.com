@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Entity\Lieu;
 use App\Entity\Sortie;
+use App\Form\AfficherSortieType;
 use App\Form\CreerSortieType;
 use App\Form\LieuType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -34,6 +35,21 @@ class MainController extends AbstractController
          return $this->render("main/creerSortie.html.twig" , [
                 'sortie1Form' => $sortie1Form->createView(),
          ]);
+
+
+
+    }
+
+    /**
+     * @Route("/creerSortie", name="main_creerSortie")
+     */
+    public function afficherSortie() {
+        $sortie1 = new Sortie();
+        $sortie1Form = $this->createForm(AfficherSortieType::class, $sortie1);
+
+        return $this->render("main/afficherSortie.html.twig" , [
+            'sortie1Form' => $sortie1Form->createView(),
+        ]);
     }
 
 
