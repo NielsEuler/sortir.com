@@ -33,6 +33,6 @@ class SortieFixtures extends Fixture implements DependentFixtureInterface
     {
         // TODO: Implement getDependencies() method.
         return [EtatFixtures::class];
-       //[ParticipantFixtures::class];[LieuFixtures::class];
+        //[LieuFixtures::class];
     }
 }

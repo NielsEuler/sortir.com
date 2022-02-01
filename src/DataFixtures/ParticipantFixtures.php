@@ -4,9 +4,10 @@ namespace App\DataFixtures;
 
 use App\Entity\Participant;
 use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
 
-class ParticipantFixtures extends Fixture
+class ParticipantFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager): void
     {
@@ -27,5 +28,11 @@ class ParticipantFixtures extends Fixture
         $manager->persist($participant1);
 
         $manager->flush();
+    }
+
+    public function getDependencies()
+    {
+        // TODO: Implement getDependencies() method.
+        return [CampusFixtures::class];
     }
 }
