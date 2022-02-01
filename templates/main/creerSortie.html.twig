@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Creer une nouvelle sortie | {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    {{ form_start(sortie1Form) }}
+
+    {{ form_label(sortie1Form.nom, null, {'label_attr': {'class' :'form-label' }}) }}
+    {{ form_widget(sortie1Form.nom, {'attr': {'class' :'form-control' }}) }}
+
+    {{ form_label(sortie1Form.dateHeureDebut, null, {'label_attr': {'class' :'form-label' }}) }}
+    {{ form_widget(sortie1Form.dateHeureDebut, {'attr': {'class' :'form-control' }}) }}
+
+    {{ form_label(sortie1Form.duree, null, {'label_attr': {'class' :'form-label' }}) }}
+    {{ form_widget(sortie1Form.duree, {'attr': {'class' :'form-control' }}) }}
+
+    {{ form_label(sortie1Form.dateLimiteInscription, null, {'label_attr': {'class' :'form-label' }}) }}
+    {{ form_widget(sortie1Form.dateLimiteInscription, {'attr': {'class' :'form-control' }}) }}
+
+    {{ form_label(sortie1Form.nbInscriptionsMax, null, {'label_attr': {'class' :'form-label' }}) }}
+    {{ form_widget(sortie1Form.nbInscriptionsMax, {'attr': {'class' :'form-control' }}) }}
+
+    {{ form_widget(sortie1Form) }}
+    <button type="submit" class="btn btn-success mt-2 mb-5">Enregistrer</button>
+    <button class="btn btn-success mt-2 mb-5">Publier la sortie</button>
+    <button type="reset" class="btn btn-default mt-2 mb-5">Annuler</button>
+    {{ form_end(sortie1Form) }}
+{% endblock %}
