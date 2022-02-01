@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                 <span class="border">
                     <li class="nav-item">
@@ -9,10 +9,16 @@
                     </li>
                 </span>
 
-                {% if app.user %}
+            <span class="border">
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{ path('main_profiles') }}" title="MonProfil">Mon profil</a>
+                    </li>
+                </span>
+
+{#            {% if app.user %}
                 <span class="border">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" title="MonProfil">Mon profil</a>
+                        <a class="nav-link" href="{{ path('/main_profiles') }} }" title="MonProfil">Mon profil</a>
                     </li>
                 </span>
 
@@ -21,9 +27,9 @@
                         <a class="nav-link" href="{{ path('app_logout') }}" title="Logout">LogOut</a>
                   </li>
                 </span>
-                {% endif %}
+            {% endif %}#}
 
-            </ul>
+        </ul>
 
-        </div>
+    </div>
 </nav>
