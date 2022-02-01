@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} | Home
+{% endblock %}
+
+{% block body %}
+    {#    {% if app.user %} #}
+    <div class="container">
+    <div class="row">
+        <div class="col-4 align-self-center">
+            LA PHOTO
+        </div>
+        <div class="col align-self-center">
+            <form>
+                <div col-md-4 ml-auto mr-auto>
+                    <br>
+                    <h1 class="h3 mb-3 font-weight-normal">Bonjour {# {{ app.user.firstname }} #}</h1>
+                </div>
+
+                <div>
+                    <label>Pseudo :</label>
+                    {# {{ form_widget(registrationForm.pseudo) }}
+            {{ form_errors(registrationForm.pseudo) }} #}
+                </div>
+
+                <div>
+                    <label>Prénom :</label>
+                    {# {{ form_widget(registrationForm.prenom) }}
+            {{ form_errors(registrationForm.prenom) }} #}
+                </div>
+
+                <div>
+                    <label>Nom :</label>
+                    {# {{ form_widget(registrationForm.nom) }}
+            {{ form_errors(registrationForm.nom) }} #}
+                </div>
+
+                <div>
+                    <label>Téléphone :</label>
+                    {# {{ form_widget(registrationForm.tel) }}
+            {{ form_errors(registrationForm.tel) }} #}
+                </div>
+
+                <div>
+                    <label>Email :</label>
+                    {# {{ form_widget(registrationForm.email) }}
+                    {{ form_errors(registrationForm.email) }} #}
+                </div>
+
+                <div>
+                    <label>Mot de passe :</label>
+                    {# {{ form_widget(registrationForm.password) }}
+                    {{ form_errors(registrationForm.password) }} #}
+                </div>
+
+                <div>
+                    <label>Confirmation du mot de passe:</label>
+                    {# {{ form_widget(registrationForm.password) }}
+            {{ form_errors(registrationForm.password) }} #}
+                </div>
+
+                <div>
+                    <label>Campus :</label>
+                    {# {{ form_widget(registrationForm.campus) }}
+            {{ form_errors(registrationForm.campus) }} #}
+                </div>
+
+                <div>
+                    <label>Ma photo :</label>
+                    {# {{ form_widget(registrationForm.photo) }}
+            {{ form_errors(registrationForm.photo) }} #}
+                </div>
+            </form>
+
+            <div class="row">
+                <div class="col">
+                <button type="submit" class="btn btn-success" name="maj">Mettre à jour</button>
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                <button type="reset" class="btn btn-danger" name="reset">Annuler</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {#    {% endif %}
+    <div class="container">
+        <div class="d-flex">
+            <div class="p-2">
+                <h1 class="d-flex justify-content-center
+                h3 mb-3
+                font-weight-normal">Vous n'êtes pas autorisez à vous rendre ici.</h1>
+            </div>
+        </div>
+    </div> #}
+
+{% endblock %}

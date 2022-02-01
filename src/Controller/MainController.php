@@ -16,6 +16,13 @@ class MainController extends AbstractController
     }
 
     /**
+     * @Route("/profiles", name="main_profiles")
+     */
+    public function profiles() {
+        return $this->render("main/profiles.html.twig");
+    }
+
+    /**
      * @Route("/creerSortie", name="main_creerSortie")
      */
     public function creerSortie() {
