@@ -43,9 +43,6 @@ class MainController extends AbstractController
          return $this->render("main/creerSortie.html.twig" , [
                 'sortie1Form' => $sortie1Form->createView(),
          ]);
-
-
-
     }
 
     /**

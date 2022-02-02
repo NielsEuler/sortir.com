@@ -3,6 +3,10 @@
 {% block title %}Mon profil{% endblock %}
 
 {% block body %}
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+
     <h1 class="h3 mb-3 font-weight-normal">Mon profil :</h1>
 
     {{ form_start(registrationForm) }}
