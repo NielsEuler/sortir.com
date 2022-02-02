@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Participant;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -38,13 +39,28 @@ class MonProfilType extends AbstractType
                 ],
             ])
 
-            ->add('nom')
+            ->add('nom', TextType::class,
+                array('attr' => array('placeholder' => 'Votre nom'),
+                    'constraints' => array(
+                        new NotBlank(array("message" => "Ne peut être laissé vide"))
+                    )
+                ))
 
-            ->add('prenom')
+            ->add('prenom', TextType::class,
+                array('attr' => array('placeholder' => 'Votre prénom'),
+                    'constraints' => array(
+                        new NotBlank(array("message" => "Ne peut être laissé vide"))
+                    )
+                ))
 
             ->add('telephone')
 
-            ->add('pseudo')
+            ->add('pseudo', TextType::class,
+                array('attr' => array('placeholder' => 'Votre pseudo'),
+                    'constraints' => array(
+                        new NotBlank(array("message" => "Ne peut être laissé vide"))
+                    )
+                ))
 
             //->add('campusRattache')
         ;
