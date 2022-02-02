@@ -10,11 +10,11 @@ class VilleFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-        $nantes = new Ville();
-        $nantes->setNom('Nantes');
-        $nantes->setCodePostal(34000);
-        $manager->persist($nantes);
-        $this ->addReference('villeNantes', $nantes);
+        $ville1 = new Ville();
+        $ville1->setNom('Nantes');
+        $ville1->setCodePostal(34000);
+        $manager->persist($ville1);
+        $this ->addReference('villeNantes', $ville1);
 
         $manager->flush();
     }
