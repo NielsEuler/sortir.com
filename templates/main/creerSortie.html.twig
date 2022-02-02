@@ -7,37 +7,24 @@
 {% block body %}
 
     <h1 class="text-center">Créer une sortie</h1>
-    <div>
-
 
         {{ form_start(sortie1Form) }}
+        <div class="row">
 
-        <div>
-            {{ form_label(sortie1Form.nom, null, {'label_attr': {'class' :'form-label' }}) }}
-            {{ form_widget(sortie1Form.nom, {'attr': {'class' :'form-control' }}) }}
-        </div>
+            <div class="col-6">
+                <div>{{ form_row(sortie1Form.nom, {'attr': {'class' :'form-control' }}) }}</div>
 
-        <div>
-        {{ form_label(sortie1Form.dateHeureDebut, null, {'label_attr': {'class' :'form-label text-center' }}) }}
-        {{ form_widget(sortie1Form.dateHeureDebut, {'attr': {'class' :'form-control' }}) }}
-        </div>
+                <div>{{ form_row(sortie1Form.dateHeureDebut, {'attr': {'class' :'form-control' }}) }}</div><br><br>
 
-        <br>
+                <div>{{ form_row(sortie1Form.dateLimiteInscription, {'attr': {'class' :'form-control' }}) }}</div>
+            </div>
 
-        <div>
-            {{ form_label(sortie1Form.dateLimiteInscription, null, {'label_attr': {'class' :'form-label' }}) }}
-            {{ form_widget(sortie1Form.dateLimiteInscription, {'attr': {'class' :'form-control' }}) }}
-        </div>
+            <div class="col-6">
 
-        <div>
-            {{ form_label(sortie1Form.nbInscriptionsMax, null, {'label_attr': {'class' :'form-label' }}) }}
-            {{ form_widget(sortie1Form.nbInscriptionsMax, {'attr': {'class' :'form-control' }}) }}
-        </div>
+                <div>{{ form_row(sortie1Form.nbInscriptionsMax, {'attr': {'class' :'form-control' }}) }}</div>
 
-
-        <div>
-            {{ form_label(sortie1Form.duree, null, {'label_attr': {'class' :'form-label' }}) }}
-            {{ form_widget(sortie1Form.duree, {'attr': {'class' :'form-control' }}) }}
+                <div>{{ form_row(sortie1Form.duree, {'attr': {'class' :'form-control' }}) }}</div>
+            </div>
         </div>
 
 
@@ -46,11 +33,12 @@
 
 
         {{ form_widget(sortie1Form) }}
-        <button type="submit" class="btn btn-success mt-2 mb-5">Enregistrer</button>
-        <button class="btn btn-success mt-2 mb-5">Publier la sortie</button>
-        <button type="reset" class="btn btn-default mt-2 mb-5">Annuler</button>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success mt-2 mb-5 ">Enregistrer</button>
+            <button class="btn btn-success mt-2 mb-5 ">Publier la sortie</button>
+            <button type="reset" class="btn btn-default mt-2 mb-5">Annuler</button>
+        </div>
     {{ form_end(sortie1Form) }}
 
-    </div>
 
 {% endblock %}
