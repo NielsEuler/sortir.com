@@ -130,9 +130,7 @@ class Participant implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->administrateur ? ["ROLE_ADMIN"] : ["ROLE_USER"];
     }
 
-    /**
-     * @see PasswordAuthenticatedUserInterface
-     */
+
     public function getPassword(): string
     {
         return $this->motDePasse;

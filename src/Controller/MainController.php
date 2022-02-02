@@ -15,6 +15,7 @@ use App\Form\GestionSitesType;
 use App\Form\GestionVillesType;
 use App\Form\LieuType;
 use App\Form\ModificationSortieType;
+use App\Form\MonProfilType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -28,10 +29,15 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/profiles", name="main_profiles")
+     * @Route("/profiles", name="main_monProfil")
      */
-    public function profiles() {
-        return $this->render("main/profiles.html.twig");
+    public function profile() {
+        $profilUser = new Participant();
+        $updateProfil = $this->createForm(MonProfilType::class, $profilUser);
+
+        return $this->render("main/monProfil.html.twig" , [
+            'updateProfil' => $updateProfil->createView(),
+        ]);
     }
 
     /**
@@ -117,6 +123,4 @@ class MainController extends AbstractController
             'sortie1form' => $sortie1Form->createView(),
         ]);
     }
-
-
 }
