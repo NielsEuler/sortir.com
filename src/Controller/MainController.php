@@ -13,6 +13,7 @@ use App\Form\CreerSortieType;
 use App\Form\GestionSitesType;
 
 use App\Form\GestionVillesType;
+use App\Form\LieuType;
 use App\Form\ModificationSortieType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -38,10 +39,10 @@ class MainController extends AbstractController
      */
     public function creerSortie() {
         $sortie1 = new Sortie();
-        $sortie1Form = $this->createForm(CreerSortieType::class);
+        $sortie1Form = $this->createForm(CreerSortieType::class, $sortie1);
 
          return $this->render("main/creerSortie.html.twig" , [
-                'sortie1Form' => $sortie1Form->createView(),
+            'sortie1Form' => $sortie1Form->createView(),
          ]);
     }
 
