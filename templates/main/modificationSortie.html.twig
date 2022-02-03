@@ -54,7 +54,31 @@
             {{ form_widget(updateSortieForm.siteOrganisateur) }}
             {{ form_errors(updateSortieForm.siteOrganisateur) }}
 
+            <label>Lieu :</label>
+            {{ form_widget(updateSortieForm.lieuSortie) }}
+            {{ form_errors(updateSortieForm.lieuSortie) }}
+
         </div>
+
+    <div class="row">
+        <div class="col">
+            <br>
+            <button type="submit" class="btn btn-success" name="maj">Enregistrer</button>
+        </div>
+        <div class="col">
+            <br>
+            <button type="submit" class="btn btn-success" name="maj">Publier la sortie</button>
+        </div>
+        <div class="col">
+            <br>
+            <button type="reset" class="btn btn-success" name="maj">Supprimer la sortie</button>
+        </div>
+        <div class="col"></div>
+        <div class="col">
+            <br>
+            <button type="reset" class="btn btn-danger" name="reset">Annuler</button>
+        </div>
+    </div>
 
     {{ form_end(updateSortieForm) }}
 
