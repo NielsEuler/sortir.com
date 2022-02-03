@@ -13,13 +13,14 @@
     {% if app.user %}
 #}
 {{ form_start(updateProfil) }}
+
 <div class="container">
     <div class="row">
         <div class="col-4 align-self-center">
             PHOTO DE PROFIL
         </div>
         <div class="col align-self-center">
-                <div col-md-4 ml-auto mr-auto>
+                <div>
                     <br>
                     <h1 class="h3 mb-3 font-weight-normal">Bonjour {# {{ app.user.firstname }} #}</h1>
                 </div>
@@ -63,10 +64,8 @@
 
                 <div>
                     <label>Confirmation du mot de passe:</label>
-                   {#
-                    {{ form_widget(updateProfil.motDePasse) }}
-                    {{ form_errors(updateProfil.motDePasse) }}
-                    #}
+                    {{ form_widget(updateProfil.plainPassword) }}
+                    {{ form_errors(updateProfil.plainPassword) }}
                 </div>
 
                 <div>
@@ -79,8 +78,8 @@
 
                 <div>
                     <label>Ma photo :</label>
-                    {# {{ form_widget(updateProfil.photo) }}
-                    {{ form_errors(updateProfil.photo) }} #}
+                    {{ form_widget(updateProfil.photo) }}
+                    {{ form_errors(updateProfil.photo) }}
                 </div>
 
 
