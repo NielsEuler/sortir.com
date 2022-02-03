@@ -23,6 +23,7 @@ class MonProfilType extends AbstractType
         $builder
             ->add('email', EmailType::class, array(
                 'help' => 'Email de contact',
+                'help_attr' => ['class' => 'font-italic'],
                 'label' => 'Votre email :',
                 'attr' => array('placeholder' => 'Ne peut être laissé vide'),
                     'required' => true,

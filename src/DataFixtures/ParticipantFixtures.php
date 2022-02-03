@@ -24,7 +24,6 @@ class ParticipantFixtures extends Fixture implements DependentFixtureInterface
         $this ->addReference('participant1', $participant1);
 
 
-
         $manager->persist($participant1);
 
         $manager->flush();
