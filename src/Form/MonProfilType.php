@@ -31,7 +31,6 @@ class MonProfilType extends AbstractType
                     )
                 )
             )
-
             ->add('motDePasse', RepeatedType::class, [
                 // Ajouts pour le type Repeated
 

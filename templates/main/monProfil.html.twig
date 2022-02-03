@@ -25,19 +25,19 @@
                     <h1 class="h3 mb-3 font-weight-normal">Bonjour {# {{ app.user.firstname }} #}</h1>
                 </div>
 
-            <div>
+            <div> {# Son pseudo #}
                 {{ form_row(updateProfil.pseudo) }}
             </div>
 
-                <div>
+                <div> {# Son prénom #}
                     {{ form_row(updateProfil.prenom) }}
                 </div>
 
-                <div>
+                <div> {# Son nom #}
                     {{ form_row(updateProfil.nom) }}
                 </div>
 
-                <div>
+                <div>{# Tel #}
                     {{ form_row(updateProfil.telephone) }}
                 </div>
 
@@ -49,13 +49,11 @@
                     {{ form_row(updateProfil.motDePasse) }}
                 </div>
 
-
-                <div>
+                <div> {# Campus de ratachement #}
                     {{ form_row(updateProfil.campusRattache) }}
                 </div>
 
-                <div>
-                    <label>Ma photo :</label>
+                <div> {# Photo de l'utilisateur #}
                     {{ form_row(updateProfil.photo) }}
                 </div>
 
