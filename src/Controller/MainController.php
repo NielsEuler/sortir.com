@@ -16,7 +16,9 @@ use App\Form\GestionVillesType;
 use App\Form\LieuType;
 use App\Form\ModificationSortieType;
 use App\Form\MonProfilType;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
@@ -43,11 +45,19 @@ class MainController extends AbstractController
     /**
      * @Route("/creerSortie", name="main_creerSortie")
      */
-    public function creerSortie() {
+    public function creerSortie(Request $request, EntityManagerInterface $entityManager) {
         $sortie1 = new Sortie();
         $sortie1Form = $this->createForm(CreerSortieType::class, $sortie1);
 
+        $sortie1Form->handleRequest($request);
+        if($sortie1Form->isSubmitted() && $sortie1Form->isValid()){
+            $entityManager->persist($sortie1);
+            $entityManager->flush();
+            return $this->redirectToRoute("main_home");
+        }
+
          return $this->render("main/creerSortie.html.twig" , [
+
             'sortie1Form' => $sortie1Form->createView(),
          ]);
     }
