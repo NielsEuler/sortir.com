@@ -11,53 +11,50 @@
     {{ form_start(updateSortieForm) }}
 
 
-        <div class="row">
-            <div class="col-6">
+    <div class="row">
+        <div class="col-6">
 
 
 
-    <label>Nom de la sortie :</label>
-    {{ form_widget(updateSortieForm.nom) }}
-    {{ form_errors(updateSortieForm.nom) }}
-    <br>
+            <label>Nom de la sortie :</label>
+            {{ form_widget(updateSortieForm.nom) }}
+            {{ form_errors(updateSortieForm.nom) }}
+            <br>
 
-   <label>Date et heure de la sortie :</label>
-    {{ form_widget(updateSortieForm.dateHeureDebut) }}
-    {{ form_errors(updateSortieForm.dateHeureDebut) }}
+           <label>Date et heure de la sortie :</label>
+            {{ form_widget(updateSortieForm.dateHeureDebut) }}
+            {{ form_errors(updateSortieForm.dateHeureDebut) }}
 
-    <label>Date limite d'inscription :</label>
-    {{ form_widget(updateSortieForm.dateLimiteInscription) }}
-    {{ form_errors(updateSortieForm.dateLimiteInscription) }}
+            <label>Date limite d'inscription :</label>
+            {{ form_widget(updateSortieForm.dateLimiteInscription) }}
+            {{ form_errors(updateSortieForm.dateLimiteInscription) }}
 
-    <label>Nombre de places :</label>
-    {{ form_widget(updateSortieForm.nbInscriptionsMax) }}
-    {{ form_errors(updateSortieForm.nbInscriptionsMax) }}
-<br>
-    <label>Durée :</label>
-    {{ form_widget(updateSortieForm.duree) }}
-    {{ form_errors(updateSortieForm.duree) }}
-    <label>minutes</label>
+            <label>Nombre de places :</label>
+            {{ form_widget(updateSortieForm.nbInscriptionsMax) }}
+            {{ form_errors(updateSortieForm.nbInscriptionsMax) }}
+            <br>
+            <label>Durée :</label>
+            {{ form_widget(updateSortieForm.duree) }}
+            {{ form_errors(updateSortieForm.duree) }}
+            <label>minutes</label>
 
-    <br>
+            <br>
 
-        <label for="description">Description et infos :</label>
-        <textarea name="description" rows="8" cols="41" class="form-control"></textarea>
-
-
+                <label for="description">Description et infos :</label>
+                <textarea name="description" rows="8" cols="41" class="form-control"></textarea>
 
 
-                <div>
-                    <div>
-                        <div>
 
 
-    <div class="col-6">
+        </div>
 
-    <label>Campus :</label>
-    {{ form_widget(updateSortieForm.siteOrganisateur) }}
-    {{ form_errors(updateSortieForm.siteOrganisateur) }}
+        <div class="col-6">
 
-    <div>
+            <label>Campus :</label>
+            {{ form_widget(updateSortieForm.siteOrganisateur) }}
+            {{ form_errors(updateSortieForm.siteOrganisateur) }}
+
+        </div>
 
     {{ form_end(updateSortieForm) }}
 
