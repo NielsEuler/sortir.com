@@ -1,1 +1,33 @@
 {% extends 'base.html.twig' %}
+
+{% block title %}
+    Modifier une sortie
+{% endblock %}
+
+{% block body %}
+
+<h1 class="h3 mb-3 font-weight-normal">Modifier une sortie</h1>
+
+    {{ form_start(updateSortieForm) }}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4 align-self-center">
+
+    <label>Nom de la sortie :</label>
+    {{ form_widget(updateSortieForm.nom) }}
+    {{ form_errors(updateSortieForm.nom) }}
+
+    <label>Date et heure de la sortie :</label>
+    {{ form_widget(updateSortieForm.dateHeureDebut) }}
+    {{ form_errors(updateSortieForm.dateHeureDebut) }}
+
+
+                <div>
+                    <div>
+                        <div>
+
+    {{ form_end(updateProfil) }}
+
+
+{% endblock %}

@@ -117,10 +117,11 @@ class MainController extends AbstractController
      */
     public function modificationSortie() {
         $sortie1 = new sortie();
-        $sortie1Form = $this->createForm(modificationSortieType::class, $sortie1);
+        $updateSortieForm = $this->createForm(modificationSortieType::class, $sortie1);
 
         return $this->render("main/modificationSortie.html.twig" , [
-            'sortie1form' => $sortie1Form->createView(),
+           'updateSortieForm' => $updateSortieForm->createView(),
+
         ]);
     }
 }
