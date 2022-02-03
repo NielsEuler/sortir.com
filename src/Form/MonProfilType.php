@@ -24,32 +24,15 @@ class MonProfilType extends AbstractType
                 )
             )
 
-            ->add('motDePasse', PasswordType::class, [
-                'mapped' => false,
-                'attr' => ['autocomplete' => 'new-password'],
-                'constraints' => [
-                    new NotBlank([
-                        'message' => 'Ne peut être laissé vide',
-                    ]),
-                    new Length([
-                        'min' => 6,
-                        'minMessage' => 'Mot de passe trop petit (minimum {{ limit }} characters)',
-                        // max length allowed by Symfony for security reasons
-                        'max' => 255,
-                        'maxMessage' => 'Mot de passe trop grand (maximum {{ limit }} characters)'
-                    ]),
-                ],
-            ])
-
-            ->add('plainPassword', RepeatedType::class, [
+            ->add('motDePasse', RepeatedType::class, [
                 // Ajouts pour le type Repeated
                 // Doivent être placés au début
                 'type' => PasswordType::class,
                 'invalid_message' => 'Les valeurs pour les champs mots de passe doivent être identiques.',
                 'options' => ['attr' => ['class' => 'password-field']],
                 'required' => true,
-                'first_options'  => ['label' => 'Mot de passe'],
-                'second_options' => ['label' => 'Répétez le mot de passe'],
+                'first_options'  => ['label' => 'Mot de passe :'],
+                'second_options' => ['label' => 'Répétez le mot de passe :'],
 
                 'mapped' => false,
                 'attr' => ['autocomplete' => 'new-password'],
