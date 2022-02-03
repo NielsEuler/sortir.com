@@ -12,7 +12,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=ParticipantRepository::class)
- * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
+ * @UniqueEntity(fields={"email"}, message="Cet email est déjà présent dans nos fichiers.")
  */
 class Participant implements UserInterface, PasswordAuthenticatedUserInterface
 {
@@ -131,7 +131,7 @@ class Participant implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
 
-    public function getPassword(): string
+    public function getmotDePasse(): string
     {
         return $this->motDePasse;
     }

@@ -33,11 +33,18 @@ class MainController extends AbstractController
     /**
      * @Route("/profiles", name="main_monProfil")
      */
-    public function profile() {
+    public function profile(Request $request, EntityManagerInterface $entityManager) {
         $profilUser = new Participant();
         $updateProfil = $this->createForm(MonProfilType::class, $profilUser);
 
-        return $this->render("main/monProfil.html.twig" , [
+        $updateProfil->handleRequest($request);
+        if($updateProfil->isSubmitted() && $updateProfil->isValid()){
+            $entityManager->persist($profilUser);
+            $entityManager->flush();
+            return $this->redirectToRoute("main_home");
+        }
+
+        return $this->render("main/monProfil.html.twig" ,[
             'updateProfil' => $updateProfil->createView(),
         ]);
     }
