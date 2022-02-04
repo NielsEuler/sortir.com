@@ -17,5 +17,13 @@ class VilleFixtures extends Fixture
         $this ->addReference('villeNantes', $ville1);
 
         $manager->flush();
+
+        $ville2 = new Ville();
+        $ville2->setNom('Washington');
+        $ville2->setCodePostal(36000);
+        $manager->persist($ville2);
+        $this ->addReference('Washington', $ville2);
+
+        $manager->flush();
     }
 }

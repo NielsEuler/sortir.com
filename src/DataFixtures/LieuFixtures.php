@@ -22,6 +22,18 @@ class LieuFixtures extends Fixture implements DependentFixtureInterface
         $manager->persist($lieu1);
 
         $manager->flush();
+
+        $lieu2 = new Lieu();
+        $lieu2->setVille($this -> getReference ('Washington'));
+        $lieu2->setNom('Washington');
+        $lieu2->setRue('rue de George');
+        $lieu2->setLongitude(120);
+        $lieu2->setLatitude(132);
+        $this ->addReference('lieu2', $lieu2);
+
+        $manager->persist($lieu2);
+
+        $manager->flush();
     }
 
     public function getDependencies()

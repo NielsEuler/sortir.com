@@ -14,8 +14,12 @@ class EtatFixtures extends Fixture
         $etat1 -> setLibelle('Ouverte');
         $manager->persist($etat1);
         $this ->addReference('etat1', $etat1);
+        $manager->flush();
 
-
+        $etat2 = new Etat();
+        $etat2  -> setLibelle('Fermée');
+        $manager->persist($etat2);
+        $this ->addReference('etat2', $etat2);
         $manager->flush();
     }
 }

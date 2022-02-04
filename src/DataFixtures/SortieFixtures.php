@@ -24,6 +24,19 @@ class SortieFixtures extends Fixture implements DependentFixtureInterface
         $Sortie1 -> setOrganisateur($this->getReference('participant1'));
         $manager->persist($Sortie1);
 
+        $Sortie2 = new Sortie();
+        $Sortie2 -> setNom('ParcAsterix');
+        $Sortie2 -> setDateHeureDebut(new \DateTime());
+        $Sortie2 -> setDuree(3);
+        $Sortie2 -> setDateLimiteInscription(new \DateTime());
+        $Sortie2 -> setNbInscriptionsMax(2);
+        $Sortie2 -> setInfosSortie('automne');
+        $Sortie2 -> setEtatSortie($this->getReference('etat2'));
+        $Sortie2 -> setSiteOrganisateur($this->getReference('campus2'));
+        $Sortie2 -> setLieuSortie($this->getReference('lieu2'));
+        $Sortie2-> setOrganisateur($this->getReference('participant2'));
+        $manager->persist($Sortie2);
+
 
 
         $manager->flush();
