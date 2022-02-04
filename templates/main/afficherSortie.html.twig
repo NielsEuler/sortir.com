@@ -15,8 +15,7 @@ Afficher une sortie
 
 
         <label>Nom de la sortie :</label>
-        {{ form_widget(afficherSortieForm.nom) }}
-        {{ form_errors(afficherSortieForm.nom) }}
+        {{ form_row(afficherSortieForm.nom) }}
         <br>
 
         <label>Date et heure de la sortie :</label>
@@ -35,11 +34,12 @@ Afficher une sortie
         {{ form_widget(afficherSortieForm.duree) }}
         {{ form_errors(afficherSortieForm.duree) }}
         <label>minutes</label>
-
+        <br>
+        <label>Description et infos :</label>
+        {{ form_widget(afficherSortieForm.infosSortie) }}
+        {{ form_errors(afficherSortieForm.infosSortie) }}
         <br>
 
-        <label for="description">Description et infos :</label>
-        <textarea name="description" rows="8" cols="41" class="form-control"></textarea>
 
 
 
