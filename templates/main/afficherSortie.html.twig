@@ -1,10 +1,64 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-
+Afficher une sortie
 {% endblock %}
 
 {% block body %}
+    <h1 class="h3 mb-3 font-weight-normal">Afficher une sortie</h1>
 
-{% endblock %}
+{{ form_start(afficherSortieForm) }}
+
+
+<div class="row">
+    <div class="col-6">
+
+
+        <label>Nom de la sortie :</label>
+        {{ form_widget(afficherSortieForm.nom) }}
+        {{ form_errors(afficherSortieForm.nom) }}
+        <br>
+
+        <label>Date et heure de la sortie :</label>
+        {{ form_widget(afficherSortieForm.dateHeureDebut) }}
+        {{ form_errors(afficherSortieForm.dateHeureDebut) }}
+
+        <label>Date limite d'inscription :</label>
+        {{ form_widget(afficherSortieForm.dateLimiteInscription) }}
+        {{ form_errors(afficherSortieForm.dateLimiteInscription) }}
+
+        <label>Nombre de places :</label>
+        {{ form_widget(afficherSortieForm.nbInscriptionsMax) }}
+        {{ form_errors(afficherSortieForm.nbInscriptionsMax) }}
+        <br>
+        <label>Durée :</label>
+        {{ form_widget(afficherSortieForm.duree) }}
+        {{ form_errors(afficherSortieForm.duree) }}
+        <label>minutes</label>
+
+        <br>
+
+        <label for="description">Description et infos :</label>
+        <textarea name="description" rows="8" cols="41" class="form-control"></textarea>
+
+
+
+
+    </div>
+</div>
+
+    <div class="col-6">
+
+        <label>Campus :</label>
+        {{ form_widget(afficherSortieForm.siteOrganisateur) }}
+        {{ form_errors(afficherSortieForm.siteOrganisateur) }}
+
+    </div>
+
+    {{ form_end(afficherSortieForm) }}
+
+
+    {% endblock %}
+
+
 
