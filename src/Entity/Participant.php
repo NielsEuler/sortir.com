@@ -136,7 +136,7 @@ class Participant implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->motDePasse;
     }
 
-    public function setMotDePasse(string $password): self
+    public function setMotdePasse(string $password): self
     {
         $this->motDePasse = $password;
 
