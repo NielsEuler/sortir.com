@@ -13,13 +13,26 @@
                     <li class="nav-item">
                     <a class="nav-link" href="{{ path('main_monProfil') }}" title="MonProfil">Mon profil</a>
                     </li>
-                </span>
+            </span>
 
             <span class="border">
-                    <li class="nav-item">
-                    <a class="nav-link" href="{{ path('main_afficherSortie') }}" title="afficherSortie">Afficher les sorties</a>
-                    </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sortie organisées
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ path('main_afficherSortie') }}"
+                       title="afficherSortie">Afficher les sorties</a>
+                    <a class="dropdown-item" href="#"
+                       title="inscriptionSortie">S'inscrire à une sortie</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href=""
+                       title="nepasvenir">Se désister</a>
+                </div>
+                </li>
                 </span>
+
             <span class="border">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -29,9 +42,11 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ path('main_creerSortie') }}"
                        title="creerSortie">Créer une sortie</a>
-                    <a class="dropdown-item" href="{{ path('main_modificationSortie') }}" title="modificationSortie">Modifier une sortie</a>
+                    <a class="dropdown-item" href="{{ path('main_modificationSortie') }}"
+                       title="modificationSortie">Modifier une sortie</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="" title="suppressionSortie">Supprimer une sortie</a>
+                    <a class="dropdown-item" href=""
+                       title="suppressionSortie">Supprimer une sortie</a>
 
                 </div>
             </li>
