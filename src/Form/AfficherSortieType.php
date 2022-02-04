@@ -3,8 +3,12 @@
 namespace App\Form;
 
 use App\Entity\Sortie;
+use Doctrine\ORM\Query\Expr\Select;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\ChoiceList\ArrayChoiceList;
+use Symfony\Component\Form\ChoiceList\ChoiceList;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -18,7 +22,7 @@ class AfficherSortieType extends AbstractType
     {
         $builder
             ->add('nom', TextType::class, [
-                'label' => 'Nom'
+                'label' => 'Nom de la sortie'
             ])
             ->add('dateHeureDebut', DateTimeType::class, [
                 'label' => 'dateHeureDebut'
@@ -42,6 +46,10 @@ class AfficherSortieType extends AbstractType
             ])
             ->add('lieuSortie', TextType::class, [
                 'label' => 'lieuSortie'
+            ])
+
+            ->add('participants', ChoiceType::class, [
+                'label' => 'participants'
             ])
         ;
     }

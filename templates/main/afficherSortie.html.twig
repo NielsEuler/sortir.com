@@ -14,13 +14,11 @@ Afficher une sortie
     <div class="col-6">
 
 
-        <label>Nom de la sortie :</label>
+
         {{ form_row(afficherSortieForm.nom) }}
         <br>
 
-        <label>Date et heure de la sortie :</label>
-        {{ form_widget(afficherSortieForm.dateHeureDebut) }}
-        {{ form_errors(afficherSortieForm.dateHeureDebut) }}
+        {{ form_row(afficherSortieForm.dateHeureDebut) }}
 
         <label>Date limite d'inscription :</label>
         {{ form_widget(afficherSortieForm.dateLimiteInscription) }}
@@ -40,7 +38,8 @@ Afficher une sortie
         {{ form_errors(afficherSortieForm.infosSortie) }}
         <br>
 
-
+        {{ form_row(afficherSortieForm.participants) }}
+        <br>
 
 
 
