@@ -74,10 +74,10 @@ class MainController extends AbstractController
      */
     public function afficherSortie() {
         $sortie1 = new Sortie();
-        $afficherSortieForm = $this->createForm(AfficherSortieType::class, $sortie1);
+        $sortie1Form = $this->createForm(AfficherSortieType::class, $sortie1);
 
         return $this->render("main/afficherSortie.html.twig" , [
-            'afficherSortieForm' => $afficherSortieForm->createView(),
+            'sortie1Form' => $sortie1Form->createView(),
         ]);
     }
 

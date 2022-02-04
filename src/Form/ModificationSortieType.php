@@ -39,12 +39,6 @@ class ModificationSortieType extends AbstractType
             ->add('siteOrganisateur', TextType::class, [
                 'label' => 'siteOrganisateur'
             ])
-            ->add('lieuSortie', TextType::class, [
-                'label' => 'lieuSortie'
-            ])
-            ->add('lieuSortie', TextType::class, [
-                'label' => 'lieuSortie'
-            ])
 
 
 
